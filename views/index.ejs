@@ -23,6 +23,7 @@
 
     <link rel="stylesheet" type="text/css" href="/css/reset.css?v=1.0">
     <link rel="stylesheet" type="text/css" href="/css/styles.css?v=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/game.css?v=1.0">
 </head>
 
 <body>
@@ -31,15 +32,14 @@
     <!-- importation du code js -->
     <script src="/js/scripts.js"></script>
 
-    <header> This is my header </header>
+    <div class="page">
+        <%- include('partials/navbar.ejs'); %>
 
-    <%- include('partials/navbar.ejs'); %>
+        <div class="game" id="game">
+            <%- include('partials/formulaire.ejs'); %>
+            <%- include('partials/roue.ejs'); %>
+        </div>
+    </div>
+</body>
 
-    <%- include('partials/formulaire.ejs'); %>
-    
-    <section> ....
-        <article> ..... </article>
-    </section>
-
-    <aside> ..... </aside>
-    <%- include('partials/footer.ejs'); %>
+</html>
