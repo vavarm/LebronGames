@@ -3,7 +3,6 @@
     position: relative;
     margin: 20px;
     padding: 4px;
-    background: var(--page_color);
     border-radius: 20%;
     background: linear-gradient(var(--page_color), var(--page_color)) padding-box,
         linear-gradient(45deg, blue, red) border-box;
