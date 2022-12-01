@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 import express, {Express, Request, Response} from 'express'
 
 // Load environment variables from .env (variables globally available in process.env)
-dotenv.config({path: '.env'})
+dotenv.config({path: 'env.env'})
 
 // Create the router
 const app: Express = express()
