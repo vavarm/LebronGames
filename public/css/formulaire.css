@@ -1,3 +1,29 @@
 .formJoueur {
-    background-color: aqua;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border: 1px solid black;
+    width: 20%;
+    text-align: center;
+}
+
+.formJoueur p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.joueur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: #f5f8ff;#f5f8ff; 245,248,255*/
+    /*box-shadow: 2px 9px 15px rgba(0,0,0, 0.09);*/
+    border: 1px solid blueviolet;
+}
+
+#pseudo {
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    border-radius: 10px;
+    
 }

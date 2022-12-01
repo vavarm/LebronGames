@@ -1,15 +1,41 @@
 <link rel="stylesheet" type="text/css" href="/css/formulaire.css?v=1.0">
+<script>
+    var i = 0
 
+    function deleteJoueur(elem) {
+        var fils = elem
+        var parent = fils.parentNode
+        parent.remove()
+    }
 
+    function addJoueur() {
+        i += 1
+        var allChildElements = document.getElementsByClassName('joueur');
+        //console.log(i);
+        console.log( allChildElements.length);
+        for(let j=i; j <= allChildElements.length ; j++) {
+            /*document.writeln(allChildElements[j].innerHTML);*/
+            console.log(j);
+        }
+	        
+    }
+</script>
 
-<div>
-    <form action="setCookies()">
-        <div>
-            <div class="formJoueur">
-                <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" maxlength="20">
-                <input type="image" src="/images/croix_rouge.png" alt="Supprimer">
-            </div>
-            <input type="image" src="/images/plus_rose.png" alt="Ajouter">
-        </div>  
-    </form>
-</div>
+<div class="formJoueur">
+    <p>Ajouter un joueur</p>
+    <div class="listeJoueur">
+        <div class="joueur">
+            <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" maxlength="20">
+            <input type="image" src="/images/croix_rouge.png" alt="Supprimer" onclick="deleteJoueur(this)">
+        </div>
+        <div class="joueur">
+            <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" maxlength="20">
+            <input type="image" src="/images/croix_rouge.png" alt="Supprimer" onclick="deleteJoueur(this)">
+        </div>
+        <div class="joueur">
+            <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" maxlength="20">
+            <input type="image" src="/images/croix_rouge.png" alt="Supprimer" onclick="deleteJoueur(this)">
+        </div>
+    </div>
+    <input type="image" src="/images/plus_rose.png" alt="Ajouter" onclick="addJoueur()">
+</div>  
