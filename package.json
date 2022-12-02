@@ -1,0 +1,23 @@
+{
+  "name": "lebrongames",
+  "version": "1.0.0",
+  "description": "Bienvenue sur ce repository qui vous permettra de vous exercer et d'acquérir de multiple connaissances et compétences sur le WEB afin de ne pas être perdu lors du top départ de la nuit de l'info.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vavarm/LebronGames.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vavarm/LebronGames/issues"
+  },
+  "homepage": "https://github.com/vavarm/LebronGames#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
