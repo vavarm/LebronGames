@@ -11,7 +11,5 @@
     margin: 20px;
     padding: 40px;
     border-radius: 10%;
-    background: linear-gradient(var(--page_color), var(--page_color)) padding-box,
-        linear-gradient(45deg, blue, red) border-box;
     border: 5px solid transparent;
 }
