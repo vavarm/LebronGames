@@ -1,21 +1,17 @@
 .game {
+    /*fill flex parent*/
     flex: 1;
+    /*center childs...*/
+    display: flex;
+    /*...vertically*/
+    align-items: center;
+    /*...horizontally*/
+    justify-content: center;
     position: relative;
     margin: 20px;
-    padding: 4px;
-    background: var(--page_color);
-}
-
-.game::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -5px;
-    border: 5px solid;
-    border-radius: 20px;
-    border-image: linear-gradient(45deg, purple, orange) 1;
+    padding: 40px;
+    border-radius: 10%;
+    background: linear-gradient(var(--page_color), var(--page_color)) padding-box,
+        linear-gradient(45deg, blue, red) border-box;
+    border: 5px solid transparent;
 }

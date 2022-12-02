@@ -1,11 +1,11 @@
 :root {
-    --page_color: grey;
+    --page_color: #D7CEC7;
 }
 
 .page {
+    display: flex;
     height: 100vh;
     min-height: 100%;
-    display: flex;
     flex-direction: column;
     background: var(--page_color);
 }
