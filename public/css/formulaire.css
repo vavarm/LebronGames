@@ -11,19 +11,29 @@
     padding: 0px;
 }
 
+.listeJoueur {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .joueur {
     display: flex;
     justify-content: center;
     align-items: center;
     /*background-color: #f5f8ff;#f5f8ff; 245,248,255*/
     /*box-shadow: 2px 9px 15px rgba(0,0,0, 0.09);*/
-    border: 1px solid blueviolet;
 }
 
-#pseudo {
+.textInput {
     width: 100px;
     height: 20px;
     text-align: center;
     border-radius: 10px;
     
 }
+
+.croix_rouge {
+    visibility: visible;
+}
+

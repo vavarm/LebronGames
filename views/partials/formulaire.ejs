@@ -1,40 +1,56 @@
 <link rel="stylesheet" type="text/css" href="/css/formulaire.css?v=1.0">
 <script>
-    var i = 0
+
+    var i = 1
 
     function deleteJoueur(elem) {
-        var fils = elem
-        var parent = fils.parentNode
-        parent.remove()
+        if (i > 1 && i <= 10) {
+            i -= 1
+            var fils = elem
+            var parent = fils.parentNode
+            var textInput = parent.getElementsByClassName("textInput");
+            var id = textInput.pseudo.id;
+            localStorage.removeItem(id);
+            parent.remove()
+            
+            console.log(i);
+            if (i == 1) {
+                image_croix = document.getElementsByClassName("croix_rouge")[0]
+                image_croix.style.visibility = "hidden";
+            }
+        }
     }
 
     function addJoueur() {
         i += 1
-        var allChildElements = document.getElementsByClassName('joueur');
-        //console.log(i);
-        console.log( allChildElements.length);
-        for(let j=i; j <= allChildElements.length ; j++) {
-            /*document.writeln(allChildElements[j].innerHTML);*/
-            console.log(j);
-        }
-	        
+        var original =  document.getElementsByClassName("joueur")[0]
+        var clone = original.cloneNode(true);
+        var textInput = clone.getElementsByClassName("textInput");
+        var clone_croix_rouge = clone.getElementsByClassName("croix_rouge")[0];
+        var original_croix_rouge = document.getElementsByClassName("croix_rouge")[0]
+        textInput.pseudo.value = ""
+        textInput.pseudo.id = "pseudo"+i;
+        clone_croix_rouge.style.visibility = "visible";
+        original_croix_rouge.style.visibility = "visible";
+
+        var parent = document.getElementsByClassName("listeJoueur")[0];
+        parent.appendChild(clone);
     }
+
+    function saveJoueur(texte) {
+        var nom = texte.value;
+        var id = texte.id
+        localStorage.setItem(id, nom)
+    }
+
 </script>
 
 <div class="formJoueur">
     <p>Ajouter un joueur</p>
     <div class="listeJoueur">
         <div class="joueur">
-            <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" maxlength="20">
-            <input type="image" src="/images/croix_rouge.png" alt="Supprimer" onclick="deleteJoueur(this)">
-        </div>
-        <div class="joueur">
-            <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" maxlength="20">
-            <input type="image" src="/images/croix_rouge.png" alt="Supprimer" onclick="deleteJoueur(this)">
-        </div>
-        <div class="joueur">
-            <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" maxlength="20">
-            <input type="image" src="/images/croix_rouge.png" alt="Supprimer" onclick="deleteJoueur(this)">
+            <input class="textInput" id="pseudo1" type="text" name="pseudo" placeholder="Pseudo" maxlength="20" onchange="saveJoueur(this)">
+            <input class="croix_rouge" type="image" src="/images/croix_rouge.png" alt="Supprimer" onclick="deleteJoueur(this)">
         </div>
     </div>
     <input type="image" src="/images/plus_rose.png" alt="Ajouter" onclick="addJoueur()">
