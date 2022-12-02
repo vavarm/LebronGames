@@ -1,12 +1,26 @@
 .formJoueur {
-    border: 1px solid black;
-    width: 20%;
     text-align: center;
+    width: 547px;
+    height: 284px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #FDE0E0 0%, rgba(231, 176, 219, 0.56) 100%);
 }
 
 .formJoueur p {
     margin: 0px;
     padding: 0px;
+    color: #F8287F;
+    width: 443px;
+    height: 61px;
+    /*left: 897px;
+    top: 44px;*/
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;    
+    letter-spacing: -0.045em;
+    text-shadow: -5px 5px 0px rgba(45, 239, 146, 0.5);
 }
 
 .listeJoueur {
@@ -32,6 +46,6 @@
 }
 
 .croix_rouge {
-    visibility: visible;
+    visibility: hidden;
 }
 
